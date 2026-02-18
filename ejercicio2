@@ -1,0 +1,15 @@
+# 1. Leer la cantidad de personas
+total_personas = int(input("Ingrese la cantidad de personas (mayor a 2): "))
+
+# 2. Calcular grupos de 3 y el residuo (cuántos sobran)
+grupos_de_tres = total_personas // 3
+sobrantes = total_personas % 3
+if sobrantes == 0:
+    # Es múltiplo de 3, no sobran personas
+    print(f"Se pueden formar {grupos_de_tres} grupos de tres.")
+else:
+    # Si sobra 1, un grupo de tres se convierte en uno de cuatro (sobrantes = 1)
+    # Si sobran 2, dos grupos de tres se convierten en dos de cuatro (sobrantes = 2)
+    grupos_finales_tres = grupos_de_tres - sobrantes
+    grupos_de_cuatro = sobrantes
+    print(f"Se formaron {grupos_finales_tres} grupos de tres y {grupos_de_cuatro} grupo(s) de cuatro.")
