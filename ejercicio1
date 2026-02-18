@@ -1,0 +1,20 @@
+import random
+                                                                                            # 1. Leer los nombres de los jugadores
+jugador1 = input("Ingrese el nombre del primer jugador: ")
+jugador2 = input("Ingrese el nombre del segundo jugador: ")
+                                                                                            # 2. Generar cartas para el Jugador 1 y 2
+carta1_j1 = random.randint(1, 13)
+carta2_j1 = random.randint(1, 13)
+suma_j1 = carta1_j1 + carta2_j1                                                                                       
+carta1_j2 = random.randint(1, 13)
+carta2_j2 = random.randint(1, 13)
+suma_j2 = carta1_j2 + carta2_j2  
+                                                                                            # 3. Ejecutar
+print(f"\n{jugador1} obtuvo las cartas {carta1_j1} y {carta2_j1}. Total: {suma_j1}")
+print(f"{jugador2} obtuvo las cartas {carta1_j2} y {carta2_j2}. Total: {suma_j2}\n")                                                                                             
+if suma_j1 > suma_j2:
+    print(f"¡{jugador1} empieza de primero!")
+elif suma_j2 > suma_j1:
+    print(f"¡{jugador2} empieza de primero!")
+else:
+    print("¡Es un empate! Ambos lanzan de nuevo (o decidan con una moneda).")
